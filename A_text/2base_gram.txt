@@ -47,4 +47,33 @@
     Sets（集合）
     Dictionaries（字典）
 
-10、list操作：
+10、list, string, tuple, dict的具体操作：
+    详见test2.py
+
+11、if语句：
+    if    condition1:
+        sta1
+    elif  condition2:
+        sta2
+    else:
+        sta3
+
+12、while循环：
+    详见while.py
+
+13、for循环 < fro.py >
+    for <variable> in <sequence>:
+        <statements>
+    else:
+        <statements>
+
+14、
+# break和continue语句及循环中的else子句
+#
+# break语句可以跳出for和while的循环体。
+# 如果你从for或while循环中终止，任何对应的循环else块将不执行。
+#
+# continue语句被用来告诉Python跳过当前循环块中的剩余语句，然后继续进行下一轮循环。
+#
+# 循环语句可以有else子句;它在穷尽列表(以for循环)或条件变为假(以while循环)循环终止时被执行,
+    # 但循环被break终止时不执行.如下查寻质数的循环例子:
