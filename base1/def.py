@@ -45,16 +45,32 @@ p(10,90,23)#自动匹配for
 #    时不占用栈内存从而增加运行效率。
 
 s = lambda a1, a2: a1 + a2
-print( s(12, 90) )
+print(s(12, 90))
 
 
 """列表翻转"""
-def reverse(li):
-    for i in range(0, len(li)/2):
-        temp = li[i]
-        li[i] = li[-i-1]
-        li[-i-1] = temp
-
-m = [1, 2, 3, 4, 5]
-reverse(m)
-print(m)
+# #翻转1
+# def reverse(li):
+#     for i in range(0, len(li)/2):
+#         temp = li[i]
+#         li[i] = li[-i-1]
+#         li[-i-1] = temp
+#
+# m = [1, 2, 3, 4, 5]
+# reverse(m)
+# print(m)
+#
+# #翻转2
+# def reverse(ListInput):
+#     RevList=[]
+#     for i in range (len(ListInput)):
+#         RevList.append(ListInput.pop())
+#     return RevList
+#
+# #简化翻转
+# def reverse(li):
+#     for i in range(0, len(li)/2):
+#         li[i], li[-i - 1] = li[-i - 1], li[i]
+# l = [1, 2, 3, 4, 5]
+# reverse(l)
+# print(l)
