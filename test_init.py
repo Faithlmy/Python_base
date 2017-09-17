@@ -1,4 +1,6 @@
 
+from p1.m12 import fun_m12
+
 
 
 class X:
@@ -14,6 +16,8 @@ if __name__ == '__main__':
     r = Re()
     r.length, r.width = 2, 4
     print(r.area())
+import sys
+a = sys.path.append("D:\\pro\\faith_os")
+print(a)
 
-from p1.m12 import fun_m12
 print(fun_m12())
