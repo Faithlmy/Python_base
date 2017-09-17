@@ -1,0 +1,79 @@
+1、交互式编程：即在python的命令的窗口直接输入命令
+2、脚本编程：把许多命令写成.py文件，一次性执行
+3、python的标识符：
+    在 Python 里，标识符由字母、数字、下划线组成。
+
+    在 Python 中，所有标识符可以包括英文、数字以及下划线(_)，但不能以数字开头。
+
+    Python 中的标识符是区分大小写的。
+
+    以下划线开头的标识符是有特殊意义的。以单下划线开头 _foo 的代表不能直接访问的类属性，
+    需通过类提供的接口进行访问，不能用 from xxx import * 而导入；
+
+    以双下划线开头的 __foo 代表类的私有成员；以双下划线开头和结尾的 __foo__ 代表 Python
+    里特殊方法专用的标识，如 __init__() 代表类的构造函数。
+4、python的保留字：
+    and	      exec   	    not
+   assert	  finally	    or
+   break	  for	       pass
+   class	  from	      print
+   continue	  global	  raise
+    def	      if	      return
+    del	       import	   try
+    elif	  in	      while
+   else	      is	      with
+    except	  lambda	yield
+
+5、与其他语言最大的区别：
+    缩进
+    不用;
+    一般用:
+    单引号 和 双引号 效果一样，但是建议整个项目用一种
+
+6、注释：#
+
+
+7、变量类型：(程序见2base_gram.txt中 <1>)
+    与c c++ java 等强类型语言不一样，Python的解释器
+    不需要预先声明变量的类型，变量的类型和值在赋值的那一刻被初始化（声明和定义的过程一起完成）
+    在python中， 每一个变量在内存中创建，我们可以通过变量来查看内存中的值
+8、变量的作用域：(程序见2base_gram.txt中 <2>)
+
+9、数据类型：
+    Numbers（数字）
+    String（字符串）
+    List（列表）
+    Tuple（元组）
+    Sets（集合）
+    Dictionaries（字典）
+
+10、list, string, tuple, dict的具体操作：
+    详见test2.py
+
+11、if语句：
+    if    condition1:
+        sta1
+    elif  condition2:
+        sta2
+    else:
+        sta3
+
+12、while循环：
+    详见while.py
+
+13、for循环 < fro.py >
+    for <variable> in <sequence>:
+        <statements>
+    else:
+        <statements>
+
+14、
+# break和continue语句及循环中的else子句
+#
+# break语句可以跳出for和while的循环体。
+# 如果你从for或while循环中终止，任何对应的循环else块将不执行。
+#
+# continue语句被用来告诉Python跳过当前循环块中的剩余语句，然后继续进行下一轮循环。
+#
+# 循环语句可以有else子句;它在穷尽列表(以for循环)或条件变为假(以while循环)循环终止时被执行,
+    # 但循环被break终止时不执行.如下查寻质数的循环例子:
