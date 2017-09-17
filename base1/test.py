@@ -107,7 +107,8 @@ print(r'C:\some\name')
 #字符串的相加 以及 chengfang
 print('str'+'ing'," \n", 'my'*3)
 
-#python的切片：与C字符串不同的是，Python字符串不能被改变。向一个索引位置赋值，比如word[0] = 'm'会导致错误。
+#python的切片：与C字符串不同的是，Python字符串不能被改变。
+# 向一个索引位置赋值，比如word[0] = 'm'会导致错误。
 
 word = 'ilovepython'
 print(word[ 1 : 5])
