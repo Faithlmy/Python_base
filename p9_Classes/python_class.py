@@ -238,29 +238,60 @@
 # print(p.age)
 
 """私有函数中的私有变量"""
-class A:
-    mp = property()
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-    def _pro(self):
-        self.__mp = ''
-        sum_pro = self.x + self.y
-        m_p = a.mp
-        s_pro = m_p + self.x
-        #return sum_pro
-        return s_pro, sum_pro
-    def pro(self):#私有函数公有化
-        p, q = self._pro()
-        return p, q
-    """#私有变量公有化"""
-    def mp(self, v):
-        self.__mp = v
-    def mp(self):
-        tp = self.__mp
-        return tp
+# class A:
+#     mp = property()
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
+#     def _pro(self):
+#         self.__mp = ''
+#         sum_pro = self.x + self.y
+#         m_p = a.mp
+#         s_pro = m_p + self.x
+#         #return sum_pro
+#         return s_pro, sum_pro
+#     def pro(self):#私有函数公有化
+#         p, q = self._pro()
+#         return p, q
+#     """#私有变量公有化"""
+#     def mp(self, v):
+#         self.__mp = v
+#     def mp(self):
+#         tp = self.__mp
+#         return tp
+#
+# a = A(9,8)
+# #print(a.pro())
+# a.mp = 3
+# print(a.pro())
 
-a = A(9,8)
-#print(a.pro())
-a.mp = 3
-print(a.pro())
+
+class Mapping:
+    def __init__(self, value):
+        self.items_list = []
+        self.__update(value)
+    def update(self, value):
+        for item in value:
+            self.items_list.append(item)
+
+    __update = update
+
+class MappingSubclass(Mapping):
+    def update(self, key, value):
+        # provides new signature for update()
+        # but does not break __init__()
+        for item in zip(key, value):
+            self.items_list.append(item)
+
+# m = Mapping({9, 8, 7})
+# m = Mapping([3, 5, 6])
+# print(m.items_list)
+m = MappingSubclass
+
+
+s = '523'
+#t = iter(s)
+for i in iter(s):
+    print(next(i))
+# print(next(t))
+# print(next(t))
