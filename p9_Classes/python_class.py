@@ -289,9 +289,33 @@ class MappingSubclass(Mapping):
 m = MappingSubclass
 
 
-s = '523'
+#s = '523'
 #t = iter(s)
-for i in iter(s):
-    print(next(i))
 # print(next(t))
 # print(next(t))
+
+"""=== reverse ==="""
+# class Reverse:
+#     def __init__(self, data):
+#         self.date = data
+#         self.index = len(data)
+#     def __iter__(self):
+#         return self
+#     def __next__(self):
+#         if self.index == 0:
+#             raise StopIteration
+#         self.index = self.index - 1
+#         return self.date[self.index]
+# r = Reverse('5346')
+# #print(iter(r))
+# for x in r:
+#     print(x)
+
+
+"""====Generator===="""
+def reverse(data):
+    for index in range(len(data)-1, -1, -1):
+        yield data[index]
+
+for char in reverse('meng'):
+    print(char)
