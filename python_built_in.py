@@ -144,8 +144,67 @@ import python_built_in_source as b
 # print(c.x)
 # print(c.y)
 # #print(c.z) #AttributeError: 'Coordinate' object has no attribute 'z'
-print(dir())
 
-class Shape:
-    def __dir__(self):
-        return ['area', 'perimeter']
+#print(dir())
+# class Shape:
+#     def __dir__(self):
+#         return ['area', 'perimeter']
+# #print(dir(Shape))
+# print(divmod(2,4))
+
+"""===enumerate()==="""
+# s = ['A', 'B', 'C']
+# m = list(enumerate(s, 1))
+# print(m)
+
+"""===eval()==="""
+
+"""===exec()==="""
+# program = 'a = 5\nb=10\nprint("Sum =", a+b)'
+# exec(program)
+
+# code = compile('a = 1+9', '<int>', 'exec')
+# #code = compile('a = 1+9', '<int>', 'none')
+# #ValueError: compile() arg 3 must be 'exec', 'eval' or 'single'
+# exec(code)
+# print(a)
+
+# program = input('Enter a program:')
+# exec(program)
+
+"""===format()==="""
+# print("Sammy has {} balloons.".format(5))
+# print("Sammy the {1} has a pet {0}!".format("shark", "pilot fish"))
+# print("Sammy is a {3}, {2}, and {1} {0}!".format("happy", "smiling", "blue", "shark"))
+# print("Sammy the {0} {1} a {pr}.".format("shark", "made", pr = "pull request"))
+# print("Sammy ate {0:.3f} percent of a pizza!".format(75.765367))
+# print("Sammy has {0:4} red {1:16}!".format(5, "balloons"))
+# print("Sammy has {0:<4} red {1:^16}!".format(5, "balloons"))
+# print("{:*^20s}".format("Sammy"))
+# print("Sammy ate {0:5.0f} percent of a pizza!".format(75.765367))
+
+"""===froznset==="""
+"""===getattr==="""
+"""===globals==="""
+"""===hasatter==="""
+"""===hash()==="""
+# print(hash('1.0'))
+# print(hash('1'))
+"""===help==="""
+"""===hex==="""
+#print(hex(255))
+#print('%#x' %255, '%x' %255, '%X' %255)
+#print(format(255, '#x'), format(255, 'x'), format(255, 'X'))
+#print(f'{255:#x}', f'{255:x}', f'{255:X}')#官网看的但是有误，不知道原因
+
+"""===id==="""
+print(id('a'))
+print(id('b'))
+
+"""===input==="""
+#s = input('--->')
+#print(s)
+
+"""===isinstance==="""
+import os
+print(dir(os))

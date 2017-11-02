@@ -229,11 +229,20 @@ def dir(p_object=None):  # real signature unknown; restored from __doc__
 
 def divmod(x, y):  # known case of builtins.divmod
     """
+    Syntax:
     divmod(x, y) -> (div, mod)
 
+    Return value:
     Return the tuple ((x-x%y)/y, x%y).  Invariant: div*y + mod == x.
     """
     return (0, 0)
+
+def enumerate():
+    """
+
+    :return:
+    """
+    pass
 
 
 def eval(source, globals=None, locals=None):  # real signature unknown; restored from __doc__
@@ -252,12 +261,22 @@ def eval(source, globals=None, locals=None):  # real signature unknown; restored
 
 def exec(p_object, globals=None, locals=None):  # real signature unknown; restored from __doc__
     """
-    exec(object[, globals[, locals]])
-
+    Deccription:
     Read and execute code from an object, which can be a string or a code
     object.
     The globals and locals are dictionaries, defaulting to the current
     globals and locals.  If only globals is given, locals defaults to it.
+
+    Syntax:
+    exec(object[, globals[, locals]])
+    exec(object, globals, locals)
+
+    Parameter:
+    object - Either a string or a code object
+    globals (optional) - a dictionary
+    locals (optional)- a mapping object. Dictionary is the standard and commonly used mapping type in Python.
+
+
     """
     pass
 
@@ -268,8 +287,10 @@ def exit(*args, **kwargs):  # real signature unknown
 
 def format(value, format_spec=None):  # real signature unknown; restored from __doc__
     """
+    Syntax:
     format(value[, format_spec]) -> string
 
+    Return value:
     Returns value.__format__(format_spec)
     format_spec defaults to ""
     """
@@ -278,11 +299,19 @@ def format(value, format_spec=None):  # real signature unknown; restored from __
 
 def getattr(object, name, default=None):  # known special case of getattr
     """
-    getattr(object, name[, default]) -> value
-
+    Description:
     Get a named attribute from an object; getattr(x, 'y') is equivalent to x.y.
     When a default argument is given, it is returned when the attribute doesn't
     exist; without it, an exception is raised in that case.
+
+    Syntax:
+    getattr(object, name[, default]) -> value
+
+    Parameter:
+
+    Return value:
+
+
     """
     pass
 
@@ -308,10 +337,14 @@ def hasattr(p_object, name):  # real signature unknown; restored from __doc__
 
 def hash(p_object):  # real signature unknown; restored from __doc__
     """
+    Syntax:
     hash(object) -> integer
 
+    Return value:
     Return a hash value for the object.  Two objects with the same value have
     the same hash value.  The reverse is not necessarily true, but likely.
+
+
     """
     return 0
 
@@ -343,20 +376,30 @@ def hex(number):  # real signature unknown; restored from __doc__
 
 def id(p_object):  # real signature unknown; restored from __doc__
     """
-    id(object) -> integer
-
+    Description:
     Return the identity of an object.  This is guaranteed to be unique among
     simultaneously existing objects.  (Hint: it's the object's memory address.)
+
+    Syntax:
+    id(object) -> integer
+
+    Parameter:
+    object --> anything of object
+
+    Return value:
+    Return the identity of an object which is the address of object in memory
     """
     return 0
 
 
 def input(prompt=None):  # real signature unknown; restored from __doc__
     """
+    Syntax:
     input([prompt]) -> string
 
-    Read a string from standard input.  The trailing newline is stripped.
-    If the user hits EOF (Unix: Ctl-D, Windows: Ctl-Z+Return), raise EOFError.
+    Description:
+    Read a string from standard input.  The trailing(追踪) newline is stripped(清除).
+    If the user hits(迎合) EOF (Unix: Ctl-D, Windows: Ctl-Z+Return), raise EOFError.
     On Unix, GNU readline is used if enabled.  The prompt string, if given,
     is printed without a trailing newline before reading.
     """
@@ -365,8 +408,10 @@ def input(prompt=None):  # real signature unknown; restored from __doc__
 
 def isinstance(p_object, class_or_type_or_tuple):  # real signature unknown; restored from __doc__
     """
+    Syntax:
     isinstance(object, class-or-type-or-tuple) -> bool
-
+    
+    Description:
     Return whether an object is an instance of a class or of a subclass thereof.
     With a type as second argument, return whether that is the object's type.
     The form using a tuple, isinstance(x, (A, B, ...)), is a shortcut for
@@ -433,7 +478,7 @@ def max(*args, key=None):  # known special case of max
     default keyword-only argument specifies an object to return if
     the provided iterable is empty.
     With two or more arguments, return the largest argument.
-    """
+     """
     pass
 
 
