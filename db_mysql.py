@@ -55,7 +55,7 @@ class Connect_mysql(object):
         except Exception as e:
             print("cursor error: ", e)
 
-    def close(self):
+    def close_connection(self):
         """
         关闭游标和连接
         :return:
@@ -88,3 +88,4 @@ if __name__ == "__main__":
     r.get_cur()
     d = r.query(sql)
     print(d)
+    r.close_connection()
