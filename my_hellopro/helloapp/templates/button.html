@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>please input two numbers</p>
+<form action="/addsum1/" method="post">{% csrf_token %}<br>
+    <p>a: {{ form.a }}</p><br>
+    <p>b: {{ form.b }}</p><br>
+    <input type="submit" value="submit"><br/>
+</form>
+d:<input type="text" value="{{d}}"><br>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Netscape HTTP Cookie File
+# http://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file!  Do not edit.
+
+10.129.4.97	FALSE	/	FALSE		sessionid	l7tqpuzzdjk08hfo9hqum0b7oinujwg0

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>please input two numbers</p>
+<form action="/adds/" method="post">{% csrf_token %}<br>
+    <p>userName: {{ form.userName }}</p><br>
+    <p>passWord: {{ form.passWord }}</p><br>
+    <p>url_login: {{ form.url_login }}</p><br>
+    <p>url_next: {{ form.url_next }}</p><br>
+    <input type="submit" value="submit"><br/>
+</form>
+
+    <ul>
+        {% for k, v in result_login_e.items %}
+        <li>
+            {{k}}:{{v}}
+        </li>
+        {% endfor %}
+    </ul>
+<br>
+
+    <ul>
+        {% for k, v in result_next_e.items %}
+        <li>
+            {{k}}:{{v}}
+        </li>
+        {% endfor %}
+    </ul>
+<br>
+
+</body>
+</html>
