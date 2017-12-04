@@ -1,45 +1,6 @@
-import threading
-from time import sleep, ctime
-import os
-import random
-import stat as s
 import time
 import datetime
 
-def hello(name):
-    print("hello %s\n" % name)
-
-    global timer
-    timer = threading.Timer(2.0, hello, ["Hawk"])
-    timer.start()
-
-
-def loop1():
-    """
-    how to use sleep() and ctime()
-    :return:
-    """
-    print("h", ctime())
-    sleep(3)
-    print('3c', ctime())
-
-def loop2():
-    for i in range(1,10):
-        sleep(2)
-        print('h',ctime())
-
-def f_file(f_path):
-    # if os.path.isabs(f_path):
-    if os.path.exists(f_path) and not os.path.isfile(f_path + '/'+'test.txt'):
-        os.mknod(f_path + '/'+'test1.txt', mode=777)
-        print('abs_path')
-    else:
-        print('no_path')
-    # os.mkdir(f_path)
-
-
-def f_file_two(f_path):
-    print(os.stat(path=f_path).st_atime)
 
 def faith_time():
 
@@ -175,14 +136,7 @@ def faith_time():
 
 
 if __name__ == "__main__":
-    # timer = threading.Timer(0, hello, ["Hawk"])
-    # timer.start()
-    # loop1()
-    # loop2()
-    f_path = r'/opt/f_test/'
-    # f_file(f_path)
-    file_name = 'test1.txt'
-    # f_file_two(f_path + file_name)
-    # faith_time()
-    # for i in range(1,10):
-    #     print(chr(random.randint(97,122)))
+    faith_time()
+    print(datetime.MAXYEAR,
+          datetime.MAXDAY,
+          )
