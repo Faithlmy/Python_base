@@ -1,4 +1,6 @@
 from faith_all.kk import *
+from faith_all.nn import fun1_n
+
 
 
 if __name__ == '__main__':
@@ -14,3 +16,4 @@ if __name__ == '__main__':
           )
     fun2()
     fun1()
+    fun1_n()

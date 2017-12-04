@@ -13,3 +13,5 @@ def fun1():
     print('faith')
 def fun2():
     print('vic')
+def __fun3():
+    print('my__fun3()')
