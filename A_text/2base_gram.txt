@@ -77,3 +77,29 @@
 #
 # 循环语句可以有else子句;它在穷尽列表(以for循环)或条件变为假(以while循环)循环终止时被执行,
     # 但循环被break终止时不执行.如下查寻质数的循环例子:
+
+
+
+ import os
+import sys
+import glob
+import shutil
+import re
+import math
+import random
+import statistics
+import urllib.request
+import smtplib
+import datetime
+import zlib
+import timeit
+import doctest
+import unittest
+import reprlib
+import pprint
+import textwrap
+import locale
+import string
+import time
+import struct, collections, bisect, decimal
+import threading, zipfile, logging, gc, weakref, array
