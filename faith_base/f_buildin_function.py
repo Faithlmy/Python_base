@@ -512,7 +512,7 @@ if __name__=='__main__':
     # faith_d()
     # faith_e()
     # faith_f()
-    # faith_g()
+    faith_g()
     # faith_h()
     # faith_i()
     # faith_m()
@@ -522,5 +522,5 @@ if __name__=='__main__':
     # faith_r()
     # faith_s()
     # faith_v()
-    faith_z()
+    # faith_z()
     pass
