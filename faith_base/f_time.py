@@ -137,6 +137,3 @@ def faith_time():
 
 if __name__ == "__main__":
     faith_time()
-    print(datetime.MAXYEAR,
-          datetime.MAXDAY,
-          )
