@@ -1,0 +1,8 @@
+1、class 语句
+	calss className(base_class):
+		statement(s)
+		
+2、类
+	calss c1(obj):
+		x = 32
+		print c1.x

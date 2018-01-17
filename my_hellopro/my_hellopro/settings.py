@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'helloapp',
+    'test_django',
 ]
 
 MIDDLEWARE = [
@@ -77,11 +78,11 @@ WSGI_APPLICATION = 'my_hellopro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'apibeacon',
-        'HOST': '10.129.7.200',
+        'NAME': 'st',
+        'HOST': '10.149.3.130',
         'PORT': '3306',
-        'USER': 'user1',
-        'PASSWORD': 'Beaconuser1!',
+        'USER': 'root',
+        'PASSWORD': 'root',
     }
 }
 
