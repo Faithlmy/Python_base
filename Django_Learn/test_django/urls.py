@@ -15,22 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-import helloapp.views as m
-import my_hellopro.test_django
+from . import views
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    #url(r'^my/$', m.index, name='index'),
-    url(r'^my/$', m.index, name='index'),
-    #url(r'a=(\d+)&b=(\d+)', m.home, name='home'),
-    #url(r'^m/$', m.home, {'a': 5, 'b': 3}),
-    url(r'^add/$', m.add, name='add'),
-    url(r'^success/$', m.success, name='success'),
-    url(r'^addstring/$', m.addstring, name='addstring'),
-    url(r'^addlist/$', m.addlist, name='addlist'),
-    url(r'^adddict/$', m.adddict, name='addict'),
-    url(r'^addcra/$', m.addcra, name='addcra'),
-    # url(r'^addcra1/$', m.urlnext, name='addcra'),
-    #url(r'^addsum1/$', m.addsum1, name='addsum1'),
-    url(r'^adds/$', m.adds, name='adds')
-
+    # url(r'^admin/', admin.site.urls),
+    url(r'^test_pass', views.test_pass, name='test')
 ]

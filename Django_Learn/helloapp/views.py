@@ -54,7 +54,7 @@ def addcra(request):
 # def urlnext(request):
 #     app = request.GET.get('app')
 #     if app == 'calc':
-#         result_next = os.system('open /my_hellopro/cookie.txt')
+#         result_next = os.system('open /mainpro/cookie.txt')
 #         #result_next = os.system('open /collectapi/manageapi/cra_9add.py')
 #         # url_login = r'http://10.129.4.97:90/ac/login'
 #         # values = {'username': 'F1330314',
@@ -107,7 +107,7 @@ def adds(request):
 # import helloapp.models as m
 #
 # # import os, django
-# # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "my_hellopro.settings")# project_name 项目名称
+# # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mainpro.settings")# project_name 项目名称
 # # django.setup()
 # p1 = m.HelloappMyInfoA(username='李逵', password='1234', age=2, sex=True)
 # p1.save()
