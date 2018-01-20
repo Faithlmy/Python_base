@@ -1,15 +1,14 @@
 from django.db import models
 
 # Create your models here.
-
 class TbCustomInfo(models.Model):
     c_name = models.CharField(max_length=255, blank=True, null=True)
     c_name_short = models.CharField(max_length=255, blank=True, null=True)
     c_num = models.CharField(max_length=255, blank=True, null=True)
     c_type = models.CharField(max_length=255, blank=True, null=True)
     c_site = models.CharField(max_length=255, blank=True, null=True)
-    create_time = models.DateTimeField(blank=True, null=True)
-    modify_time = models.DateTimeField(blank=True, null=True)
+    create_time = models.DateTimeField(blank=True, null=True, auto_now_add=True)
+    modify_time = models.DateTimeField(blank=True, null=True, auto_now_add=True)
     delete_flag = models.IntegerField(blank=True, null=True)
 
     class Meta:
@@ -18,6 +17,7 @@ class TbCustomInfo(models.Model):
 
 
 class TbCustomerPaper(models.Model):
+    # mm = models.Manager
     ecn_no = models.CharField(db_column='ECN_NO', max_length=255, blank=True, null=True)  # Field name made lowercase.
     version = models.CharField(max_length=255, blank=True, null=True)
     p_name = models.CharField(max_length=255, blank=True, null=True)
