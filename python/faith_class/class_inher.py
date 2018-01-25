@@ -108,6 +108,7 @@ if __name__ == '__main__':
     # res = a.show()
     # print(type(res))
     # print(res)
-    C.show()
+    res = C.show
+    res
 
 
