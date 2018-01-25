@@ -224,3 +224,13 @@ def test_models(request):
         }
         content['payload'] = models_dict
     return content
+
+@api_view(http_method_names=["GET", "PUT", "POST", "DELETE"])
+@wrapp
+def cache(request):
+    """
+
+    :param request:
+    :return:
+    """
+    pass
