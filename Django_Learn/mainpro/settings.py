@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # 'helloapp',
     'rest_framework',
     'test_django',
+    'viveclass',
 ]
 
 MIDDLEWARE = [

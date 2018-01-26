@@ -10,6 +10,7 @@ from django.db.models import Q
 
 
 # Create your views here.
+
 def wrapp(func):
     """
         Response 跨域裝飾器
@@ -25,6 +26,7 @@ def wrapp(func):
 
     return wrappde
 
+
 @api_view(http_method_names=["GET", "PUT", "POST", "DELETE"])
 @wrapp
 def test_content(request):
@@ -39,23 +41,25 @@ def test_content(request):
     """
     content = {"payload": [], "status": 1, "errmsg": None}
     content_new = {"payload": {}, "status": 1, "errmsg": None}
-    content['payload'] = {'content_info':[], 'models_info':{}}
-    content['payload']['content_info'] = {'content_info_next':{}, 'models_info_next':{}}
-    content['payload']['content_info']['content_info_next'] = {'content_info_next_next':{}, 'models_info_next':{}}
+    content['payload'] = {'content_info': [], 'models_info': {}}
+    content['payload']['content_info'] = {'content_info_next': {}, 'models_info_next': {}}
+    content['payload']['content_info']['content_info_next'] = {'content_info_next_next': {},
+                                                               'models_info_next': {}}
     if request.method == 'GET':
         content_info ={
-            'type_content':str(type(content)),
-            'type_content["payload"]':str(type(content["payload"])),
-            'type_content_new["payload"]':str(type(content_new["payload"])),
-            'type_content["status"]':str(type(content["status"])),
-            'type_content["errmsg"]':str(type(content["errmsg"])),
+            'type_content': str(type(content)),
+            'type_content["payload"]': str(type(content["payload"])),
+            'type_content_new["payload"]': str(type(content_new["payload"])),
+            'type_content["status"]': str(type(content["status"])),
+            'type_content["errmsg"]': str(type(content["errmsg"])),
             }
         models_info = {
             'models.TbCustomerPaper': str(models.TbCustomerPaper),
         }
         content['payload']['content_info'] = content_info
-        content['payload']['content_info']['content_info_next'] = {1:2}
-        content['payload']['content_info']['content_info_next']['content_info_next_next'] = {3:4}#嵌套使用
+        content['payload']['content_info']['content_info_next'] = {1: 2}
+        content['payload']['content_info']['content_info_next']['content_info_next_next'] \
+            = {3: 4}#嵌套使用
         content['payload']['models_info'] = models_info
     return content
 
@@ -199,10 +203,10 @@ def test_models(request):
         models_dict = {
             'type_models.TbCustomerPaper': str(type(models.TbCustomerPaper)),
             'origin_models.TbCustomerPaper': str(models.TbCustomerPaper),
-            'origin_models.TbCustomerPaper.objects':str(models.TbCustomerPaper.objects),
-            'type_models.TbCustomerPaper.objects':str(type(models.TbCustomerPaper.objects)),
-            'models.TbCustomerPaper.objects.all()':str(models.TbCustomerPaper.objects.all()),
-            'type_models.TbCustomerPaper.objects.all()':str(type(models.TbCustomerPaper.objects.all())),
+            'origin_models.TbCustomerPaper.objects': str(models.TbCustomerPaper.objects),
+            'type_models.TbCustomerPaper.objects': str(type(models.TbCustomerPaper.objects)),
+            'models.TbCustomerPaper.objects.all()': str(models.TbCustomerPaper.objects.all()),
+            'type_models.TbCustomerPaper.objects.all()': str(type(models.TbCustomerPaper.objects.all())),
             # 'create': str(create),
             # 'type_create': str(type(create)),
             # 'type_name':str(type(name)),
@@ -215,15 +219,22 @@ def test_models(request):
             # 'len_all':len(all),
             # 'type_all':str(type(all)),
             # 'all_get':int(all_get.id),
-            'models.TbCustomerPaper.objects.filter(id=22)':str(models.TbCustomerPaper.objects.filter(id=22)),
-            'type_models.TbCustomerPaper.objects.filter(id=22)':str(type(models.TbCustomerPaper.objects.filter(id=22))),
-            'models.TbCustomerPaper.objects.filter(id=22).values("ecn_no")': str(models.TbCustomerPaper.objects.filter(id=22).values("ecn_no")),
-            'type_models.TbCustomerPaper.objects.filter(id=22).values("ecn_no")': str(type(models.TbCustomerPaper.objects.filter(id=22).values("ecn_no"))),
-            'models.TbCustomerPaper.objects.exclude(id__gt=20,id__lt=23)':str(models.TbCustomerPaper.objects.exclude(id__gt=20,id__lt=23)),
-            'type_models.TbCustomerPaper.objects.exclude(id__gt=20,id__lt=23)':str(type(models.TbCustomerPaper.objects.exclude(id__gt=20,id__lt=23))),
+            'models.TbCustomerPaper.objects.filter(id=22)':
+                str(models.TbCustomerPaper.objects.filter(id=22)),
+            'type_models.TbCustomerPaper.objects.filter(id=22)':
+                str(type(models.TbCustomerPaper.objects.filter(id=22))),
+            'models.TbCustomerPaper.objects.filter(id=22).values("ecn_no")':
+                str(models.TbCustomerPaper.objects.filter(id=22).values("ecn_no")),
+            'type_models.TbCustomerPaper.objects.filter(id=22).values("ecn_no")':
+                str(type(models.TbCustomerPaper.objects.filter(id=22).values("ecn_no"))),
+            'models.TbCustomerPaper.objects.exclude(id__gt=20,id__lt=23)':
+                str(models.TbCustomerPaper.objects.exclude(id__gt=20, id__lt=23)),
+            'type_models.TbCustomerPaper.objects.exclude(id__gt=20,id__lt=23)':
+                str(type(models.TbCustomerPaper.objects.exclude(id__gt=20, id__lt=23))),
         }
         content['payload'] = models_dict
     return content
+
 
 @api_view(http_method_names=["GET", "PUT", "POST", "DELETE"])
 @wrapp

@@ -51,6 +51,8 @@ class SChild(Person):# Child 继承 Person
         self.father = father
 
 
+if __name__ == "__main__":
+    p = Person("meng", "male")
     # p.print_title()
     # p.sex = "female"
     # p.print_title()
@@ -64,7 +66,6 @@ class SChild(Person):# Child 继承 Person
     # print(sub.name)
     # sub.modify("yao")
     # print(sub.name)
-
     sd = SubChildD("meng", 25, "male")
     k = sd.print_title()
     print(isinstance(sd, SubChildD))  # Ture

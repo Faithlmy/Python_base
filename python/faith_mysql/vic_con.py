@@ -9,9 +9,9 @@ import pymysql
 
 def getHTMLtext(url):
     try:
-       r=requests.get(url,timeout=100)
+       r = requests.get(url, timeout=100)
        r.raise_for_status()
-       r.encoding=r.apparent_encoding
+       r.encoding = r.apparent_encoding
        return r.text
     except:
         return ""
