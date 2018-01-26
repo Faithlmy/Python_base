@@ -28,6 +28,12 @@ class SubChild(Person):
     def modify(self, name):
         self.name = name
 
+    def print_title(self):
+        if self.sex == "male":
+            print("boy")
+        elif self.sex == "female":
+            print("girl")
+
 
 class SubChildD(SubChild):
     """
@@ -36,8 +42,15 @@ class SubChildD(SubChild):
     pass
 
 
-if __name__ == "__main__":
-    p = Person("faith", "male")
+class SChild(Person):# Child 继承 Person
+    def __init__(self, name, sex, mother, father):
+        super(SChild, self).__init__(name, sex)
+        self.name = name
+        self.sex = sex
+        self.mother = mother
+        self.father = father
+
+
     # p.print_title()
     # p.sex = "female"
     # p.print_title()
@@ -52,5 +65,11 @@ if __name__ == "__main__":
     # sub.modify("yao")
     # print(sub.name)
 
-    # sd = SubChildD("meng", 25, "male")
-    # k = sd.print_title()
+    sd = SubChildD("meng", 25, "male")
+    k = sd.print_title()
+    print(isinstance(sd, SubChildD))  # Ture
+    print(isinstance(sd, SubChild))  # Ture
+    print(isinstance(sd, Person))  # Ture
+    print(isinstance(p, Person))  # Ture
+    print(isinstance(p, SubChildD))  # False
+

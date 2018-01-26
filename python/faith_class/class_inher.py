@@ -109,6 +109,6 @@ if __name__ == '__main__':
     # print(type(res))
     # print(res)
     res = C.show
-    res
+
 
 
