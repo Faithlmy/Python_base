@@ -178,12 +178,12 @@ def my_wrapper(fun):
     return check  # 再返回 inner 函数
 
 
-@ my_wrapper
+@my_wrapper
 def my_sum(a, b):
     return Site(a.x + b.x, a.y + b.y)
 
 
-@ my_wrapper
+@my_wrapper
 def my_sub(a, b):
     return Site(a.x - b.x, a.y - b.y)
 
