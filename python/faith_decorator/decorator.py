@@ -188,7 +188,7 @@ def my_sub(a, b):
     return Site(a.x - b.x, a.y - b.y)
 
 
-# 针对通用函数
+# 针对通用函数的传参
 def new_sum(a, b):
     return a + b
 
