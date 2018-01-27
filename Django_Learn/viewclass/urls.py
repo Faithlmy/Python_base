@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from viveclass.views import *
+from viewclass.views import *
 urlpatterns = [
-    url(r'^vc/', CustomerPaper.as_view(), name='t')
+    url(r'^vc/$', CustomerPaper.as_view(), name='t')
 ]

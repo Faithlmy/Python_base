@@ -16,9 +16,9 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from test_django import urls as td
-from viveclass import urls as vc
+from viewclass import urls as vc
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^test_django/', include(td)),
-    url(r'^viveclass/', include(vc)),
+    url(r'^viewclass/', include(vc)),
 ]
