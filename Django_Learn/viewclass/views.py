@@ -53,7 +53,7 @@ class CustomerPaper(
         id = request.GET.get("id")
         #  不輸入 id , id 的值爲 None
         if id:
-            print(type(id))  # 輸入的id的類型爲 str
+            #print(type(id))  # 輸入的id的類型爲 str
             m = models.TbCustomerPaper.objects.filter(id=int(id))
             my_list = []
             for i in m.values():
@@ -63,8 +63,8 @@ class CustomerPaper(
                 my_list.append(i)  # 生成新的列表
             self.content["payload"] = my_list
         elif id is None:
-            print(id)
-            print(type(id))  # 類型爲 NoneType
+            #print(id)
+            #print(type(id))  # 類型爲 NoneType
             m = models.TbCustomerPaper.objects.filter()
             my_list = []
             for i in m.values():
@@ -84,7 +84,7 @@ class CustomerPaper(
         st_site = request.POST.get('st_site')
         current = request.POST.get('current')
         if current and isinstance(eval(current), int):
-            print('current', type(eval(current)))
+            #print('current', type(eval(current)))
             ecn_no = request.POST.get('ecn_no')
             models.TbCustomerPaper.objects.create(st_site=st_site, current=current, ecn_no=ecn_no)
             self.content['payload'] = " create success."
