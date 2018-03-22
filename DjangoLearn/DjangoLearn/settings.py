@@ -25,8 +25,7 @@ SECRET_KEY = 'quq)&1&z5hcuw6n=(2$4em)$tj8zsw-y*j)^g1l$e&z0c1y698'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -37,13 +36,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'apps.con_sql',
+    'apps.my_con',
+    'apps.viewclass',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -54,7 +57,7 @@ ROOT_URLCONF = 'DjangoLearn.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,11 +76,25 @@ WSGI_APPLICATION = 'DjangoLearn.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'zapi',
+        'HOST': '10.129.7.200',
+        'PORT': '3306',
+        'USER': 'user1',
+        'PASSWORD': 'Beaconuser1!',
+    },
+    'customer': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'st',
+        'HOST': '10.167.197.12',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': 'root',
+    },
 }
 
 
