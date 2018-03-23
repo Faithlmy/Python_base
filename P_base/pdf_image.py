@@ -66,8 +66,8 @@ def seal_pdf(file_in, seal_path):
 
 
 if __name__ == "__main__":
-    file_in = "/home/faith/FaithMove/Python_base/python/test_pdf"
+    file_in = "/home/faith/FaithMove/Python_base/P_base/test_pdf"
     # seal_path = ["D:/222.jpg", "D:/1.jpg"]
-    seal_path = ["/home/faith/FaithMove/Python_base/python/test_pdf/12.jpg"]
+    seal_path = ["/home/faith/FaithMove/Python_base/P_base/test_pdf/12.jpg"]
     path = seal_pdf(file_in, seal_path)
 

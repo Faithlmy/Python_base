@@ -14,7 +14,6 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-from django.contrib import admin
 from apps.viewclass.views import *
 urlpatterns = [
     url(r'^vc/$', CustomerPaper.as_view(), name='t')

@@ -29,11 +29,11 @@ def seal_pdf(file_path):
             layout = dev.get_result()
             for x in layout:
                 if (isinstance(x, LTTextBoxHorizontal)):
-                    with open(r'/home/faith/FaithMove/Python_base/python/1.txt', 'a') as f:
+                    with open(r'/home/faith/FaithMove/Python_base/P_base/1.txt', 'a') as f:
                         results = x.get_text()
                         print(results)
                         f.write(results + '\n')
 
 if __name__ == "__main__":
-    file_path = "/home/faith/FaithMove/Python_base/python/test_pdf/hh.pdf"
+    file_path = "/home/faith/FaithMove/Python_base/P_base/test_pdf/hh.pdf"
     seal_pdf(file_path=file_path)

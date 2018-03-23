@@ -63,7 +63,7 @@ def faith_str():
     加 r 表示查找的位置有第一个和最后一个之分
     :return:
     """
-    str = 'hi, python!python!{}'
+    str = 'hi, P_base!P_base!{}'
     str1 = "this is\tstring is example....wow is !!!"
 
     str3 = 'aouie'
@@ -75,7 +75,7 @@ def faith_str():
     print(str.capitalize())  # 将首字母大写
     print(str.center(50, '*'))  # 居中填充
     print(str.count('p'))  # 计算p出现的次数
-    print(str.count('python'))
+    print(str.count('P_base'))
     print('utf-8 ', str.encode('utf-8',)) # 编码格式
     print('endswith() ', str.endswith('py', 4, 6))  # 是否以指定的字符串结尾,数字定位
     print(str1, '\n',
@@ -83,7 +83,7 @@ def faith_str():
     print(str.find('i'))  # 字符串中某一个字符串出现的位置
     print('format(): ', str.format('vic'))  # 字符串中插入到指定位置
     print('format(): ', str)  # 字符串中插入到指定位置
-    print('index', str.index('python', 2))  #
+    print('index', str.index('P_base', 2))  #
     print(str.isalnum())  # 字符串中是否包含数字
     print(str.isalpha())  # 是否包含字母
     print(str.isdigit())  # 是否仅仅包含数字

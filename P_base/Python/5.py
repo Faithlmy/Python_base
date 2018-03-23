@@ -6,6 +6,6 @@ while (f < 10):
     if(f < 5): 
         print('lmy') 
         continue
-        print("m") 
+        print("m")
 print("hello")
-    
+

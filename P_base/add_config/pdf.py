@@ -2,7 +2,7 @@
 Using xhtml2pdf.
 """
 
-from xhtml2pdf import pisa             # import python module
+from xhtml2pdf import pisa             # import P_base module
 
 # Define your data
 sourceHtml = "/home/faith/Desktop"  # only transform this character string

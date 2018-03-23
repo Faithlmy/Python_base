@@ -129,10 +129,10 @@ def connstring():
         ''.join(f1)
 
 def faith_str():
-    str = 'hi, python!python!'
+    str = 'hi, P_base!P_base!'
     print(str.capitalize())  # 将首字母大写
     print(str.count('p'))  # 计算p出现的次数
-    print(str.count('python'))
+    print(str.count('P_base'))
     print(str.find('i'))  # 字符串中某一个字符串出现的位置
     print(str.isalnum())  # 字符串中是否包含数字
     print(str.isalpha())  # 是否包含字母

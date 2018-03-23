@@ -25,7 +25,7 @@ Python扫描指定文件夹下(包含子文件夹)的文件
 假设要扫描指定文件夹下的特定前缀的文件（比方test_xxx.py）。包含子文件夹，调用scan_files("/export/home/test/", prefix="test_")
 
 
-#!/usr/bin/env python
+#!/usr/bin/env P_base
 #coding=utf-8
 
 import os

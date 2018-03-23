@@ -29,7 +29,7 @@ def addlist(request):
 
 
 def adddict(request):
-    add_dict = {'1': u'django', '2': u'html', '3': u'python'}
+    add_dict = {'1': u'django', '2': u'html', '3': u'P_base'}
     return render(request, 'dict.html', {'add_dict': add_dict})
 
 def addcra(request):
