@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../KPISTAT/.idea/KPISTAT.iml" filepath="$PROJECT_DIR$/../KPISTAT/.idea/KPISTAT.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Python_base.iml" filepath="$PROJECT_DIR$/.idea/Python_base.iml" />
     </modules>
   </component>
