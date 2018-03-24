@@ -1,4 +1,4 @@
-# calculator v1.0
+# calculator v3.0
 # Token type
 
 INTEGER, PLUS, MINUS, EOF = 'INTEGER', 'PLUS', 'MINUS', 'EOF'
