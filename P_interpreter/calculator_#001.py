@@ -1,6 +1,9 @@
 
 # calculator v1.0
 # Token type
+"""
+2+3
+"""
 
 INTEGER, PLUS, EOF = 'INTEGER', 'PLUS', 'EOF'
 

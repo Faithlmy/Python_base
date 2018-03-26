@@ -1,11 +1,6 @@
-# calculator V4.0
-"""
-3
-3+2
-3+2+4
-"""
+# calculator v5
 
-INTEGER, MUL, DIV, EOF = 'INTEGER', 'MUL', 'DIV', 'EOF'
+INTEGER, PLUS, MINUS, DIV, MUL, EOF = ('INTEGER', 'PLUS', 'MINUS', 'DIV', 'MUL', 'EOF')
 
 
 class Token(object):
@@ -14,9 +9,7 @@ class Token(object):
         self.value = value
 
     def __str__(self):
-        return 'Token({t_ype},{value} )'.format(
-            t_ype=self.t_ype,
-            value=repr(self.value))
+        return 'Token({t_ype}, {value})'.format(t_ype=self.t_ype, value=self.value)
 
     def __repr__(self):
         return self.__str__()
@@ -56,6 +49,12 @@ class Lexer(object):
                 continue
             if self.current_char.isdigit():
                 return Token(INTEGER, self.integer())
+            if self.current_char == '+':
+                self.advance()
+                return Token(PLUS, '+')
+            if self.current_char == '-':
+                self.advance()
+                return Token(MINUS, '-')
             if self.current_char == '*':
                 self.advance()
                 return Token(MUL, '*')
@@ -63,6 +62,7 @@ class Lexer(object):
                 self.advance()
                 return Token(DIV, '/')
             self.error()
+
         return Token(EOF, None)
 
 
@@ -75,7 +75,7 @@ class Interpreter(object):
         raise Exception('Invalid syntax.')
 
     def eat(self, token_type):
-        if self.current_token.type == token_type:
+        if self.current_token.t_ype == token_type:
             self.current_token = self.text.get_next_token()
         else:
             self.error()
@@ -85,17 +85,41 @@ class Interpreter(object):
         self.eat(INTEGER)
         return token.value
 
-    def expr(self):
+    def term(self):
+        """term : factor ((MUL | DIV) factor)*"""
         result = self.factor()
 
-        while self.current_token.type in (MUL, DIV):
+        while self.current_token.t_ype in (MUL, DIV):
             token = self.current_token
-            if token.type == MUL:
+            if token.t_ype == MUL:
                 self.eat(MUL)
                 result = result * self.factor()
-            elif token.type == DIV:
+            elif token.t_ype == DIV:
                 self.eat(DIV)
                 result = result / self.factor()
+
+        return result
+
+    def expr(self):
+        """Arithmetic expression parser / interpreter.
+
+        calc>  14 + 2 * 3 - 6 / 2
+        17
+
+        expr   : term ((PLUS | MINUS) term)*
+        term   : factor ((MUL | DIV) factor)*
+        factor : INTEGER
+        """
+        result = self.term()
+
+        while self.current_token.t_ype in (PLUS, MINUS):
+            token = self.current_token
+            if token.t_ype == PLUS:
+                self.eat(PLUS)
+                result = result + self.term()
+            elif token.t_ype == MINUS:
+                self.eat(MINUS)
+                result = result - self.term()
 
         return result
 
@@ -103,6 +127,8 @@ class Interpreter(object):
 def main():
     while True:
         try:
+            # To run under Python3 replace 'raw_input' call
+            # with 'input'
             text = input('calc> ')
         except EOFError:
             break
