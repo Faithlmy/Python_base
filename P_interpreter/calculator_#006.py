@@ -1,4 +1,4 @@
-# calculator v5
+# calculator v6
 
 INTEGER, PLUS, MINUS, DIV, MUL, LPAREN, RPAREN, EOF = (
     'INTEGER', 'PLUS', 'MINUS', 'DIV', 'MUL', '(', ')', 'EOF'
